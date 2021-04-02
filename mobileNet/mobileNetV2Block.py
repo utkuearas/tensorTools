@@ -1,4 +1,4 @@
-from tensorflow.keras.layers import DepthwiseConv2D , Conv2D , BatchNormalization , Activation , Add , Layer
+from tensorflow.keras.layers import DepthwiseConv2D , Conv2D , BatchNormalization , Activation , Add 
 import tensorTools.__callCounter as callCounter
 from reluN import ReluN
 
