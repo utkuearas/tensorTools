@@ -24,70 +24,80 @@ Tensor Tools contain:
 
 # Documentation
 
-### tensorTools.mobileNetv1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
+### tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
-x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+**Customizable MobileNet V1 Block**
 
-depthWiseKernel ( Arbitary ) => Default value is same with original article 
+**x( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
-filters ( Arbitary ) => Must be an integer , default value equal to double of x's channel
+**depthWiseKernel ( Arbitary )** => Default value is same with original article 
 
-useStride ( Arbitary ) => If True , stride will apply to Depthwise Convolution layer
+**filters ( Arbitary )** => Must be an integer , default value equal to double of x's channel
 
-strides ( Arbitary ) => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
+**useStride ( Arbitary )** => If True , stride will apply to Depthwise Convolution layer
 
-### tensorTools.mobileNetv2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
+**strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
 
-x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+### tensorTools.mobileNetV2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
 
-outputChannel ( Mandatory ) => Must be an integer , specify the output channel size
+**Customizable MobileNet V2 Bottleneck Block**
 
-depthWiseKernel ( Arbitary ) => Default value is same with original article
+**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
-filters ( Arbitary ) => Must be an integer , default value equal to double of x's channel
+**outputChannel ( Mandatory )** => Must be an integer , specify the output channel size
 
-t ( Arbitary ) => t used for calculate first expand convolution layer (expand = x's channel * t) , default value equal to 6
+**depthWiseKernel ( Arbitary )** => Default value is same with original article
 
-useStride ( Arbitary ) => If True , stride will apply to Depthwise Convolution layer
+**filters ( Arbitary )** => Must be an integer , default value equal to double of x's channel
 
-strides ( Arbitary ) => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
+**t ( Arbitary )** => t used for calculate first expand convolution layer (expand = x's channel * t) , default value equal to 6
+
+**useStride ( Arbitary )** => If True , stride will apply to Depthwise Convolution layer
+
+**strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
 
 ### tensorTools.ReluN ( n , name = None )
 
-n ( Mandatory ) => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
+**ReluN is made for mobileNet Relu6 Activation Layer , but you can change the number with this method**
 
-name ( Arbitary ) => You can specify layer name
+**n ( Mandatory )** => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
+
+**name ( Arbitary )** => You can specify layer name
 
 ### tensorTools.fireModule ( x , squeeze = 16 , expand = 64 , kernels = ( (1,1) , (3,3) ) , bypass = False , complexBypass = False )
 
-x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+**Customizable SqueezeNet Fire Module**
 
-squeeze ( Arbitary ) => Must be an integer , specify the filter amount of squeeze layer
+**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
-expand ( Arbitary ) => Must be an integer , specify the filter amount of expand layer
+**squeeze ( Arbitary )** => Must be an integer , specify the filter amount of squeeze layer
 
-kernels ( Arbitary ) => Must be an list/tuple/array with 2 length , specify the kernels of squeeze and expand layer, default value is same with the article
+**expand ( Arbitary )** => Must be an integer , specify the filter amount of expand layer
 
-bypass ( Arbitary ) => default is False , apply fire module with bypass method
+**kernels ( Arbitary )** => Must be an list/tuple/array with 2 length , specify the kernels of squeeze and expand layer, default value is same with the article
 
-complexBypass ( Arbitary ) => default is False , apply fire module with complex bypass method
+**bypass ( Arbitary )** => default is False , apply fire module with bypass method
+
+**complexBypass ( Arbitary )** => default is False , apply fire module with complex bypass method
 
 ### tensorTools.residualBlock ( x , blockType = 'type2' , filters = None , filKerSelection = 'auto' , kernels = None , useStrideFirst = False , strides = (2,2))
 
-x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+**Customizable ResNet Residual Block**
 
-blockType ( Arbitary ) => Options: type1/type2/custom, 'type1' is residual block with 2 convolutional layer , 'type2' is residual block with 3 convolutional layer , if blockType is 'custom' , both kernels and filters must be given (length of kernels and length of filters must be equal)
+**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
-filters ( Arbitary ) => Must be a list/tuple/array, if blockType is 'type1' , length of filters must be 2 , if blockType is 'type2' , length of filters must be 3. 
+**blockType ( Arbitary )** => Options: type1/type2/custom, 'type1' is residual block with 2 convolutional layer , 'type2' is residual block with 3 convolutional layer , if blockType is 'custom' , both kernels and filters must be given (length of kernels and length of filters must be equal)
 
-NOTE: If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
+**filters ( Arbitary )** => Must be a list/tuple/array, if blockType is 'type1' , length of filters must be 2 , if blockType is 'type2' , length of filters must be 3. 
 
-kernels ( Arbitary ) => Must be a list/tuple/array, if blockType is 'type1' , length of kernels must be 2 , if blockType is 'type2' , length of kernels must be 3. 
+**NOTE:** If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
 
-NOTE: If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
+**kernels ( Arbitary )** => Must be a list/tuple/array, if blockType is 'type1' , length of kernels must be 2 , if blockType is 'type2' , length of kernels must be 3. 
 
-filKerSelection ( Arbitary ) => default is 'auto' , options: auto/manual
+**NOTE:** If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
 
-useStrideFirst ( Arbitary ) => default is False , if True , strides will apply to first convolutional layer
+**filKerSelection ( Arbitary )** => default is 'auto' , options: auto/manual
 
-strides ( Arbitary ) => default is (2,2) , if useStrideFirst is False , it's unnecessary 
+**useStrideFirst ( Arbitary )** => default is False , if True , strides will apply to first convolutional layer
+
+**strides ( Arbitary )** => default is (2,2) , if useStrideFirst is False , it's unnecessary 
