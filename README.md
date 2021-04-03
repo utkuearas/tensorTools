@@ -28,7 +28,7 @@ Tensor Tools contain:
 
 <br>
 
-**Customizable MobileNet V1 Block**
+#### Customizable MobileNet V1 Block
  
 <br>
  
@@ -48,7 +48,7 @@ Tensor Tools contain:
 
 <br>
 
-**Customizable MobileNet V2 Bottleneck Block**
+#### Customizable MobileNet V2 Bottleneck Block
 
 <br>
 
@@ -72,7 +72,7 @@ Tensor Tools contain:
 
 <br>
 
-**ReluN is made for mobileNet Relu6 Activation Layer , but you can change the number with this method**
+#### ReluN is made for mobileNet Relu6 Activation Layer , but you can change the number with this method
 
 <br>
 
@@ -86,7 +86,7 @@ Tensor Tools contain:
 
 <br>
 
-**Customizable SqueezeNet Fire Module**
+#### Customizable SqueezeNet Fire Module
 
 <br>
 
@@ -108,7 +108,7 @@ Tensor Tools contain:
 
 <br>
 
-**Customizable ResNet Residual Block**
+#### Customizable ResNet Residual Block
 
 <br>
 
