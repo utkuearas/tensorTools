@@ -26,7 +26,7 @@ Tensor Tools contain:
 
 ### tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
-
+<br>
 **Customizable MobileNet V1 Block**
  
  
@@ -43,9 +43,7 @@ Tensor Tools contain:
 
 ### tensorTools.mobileNetV2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
 
-
 **Customizable MobileNet V2 Bottleneck Block**
-
 
 **x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
