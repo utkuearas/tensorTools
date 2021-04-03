@@ -72,4 +72,22 @@ bypass ( Arbitary ) => default is False , apply fire module with bypass method
 
 complexBypass ( Arbitary ) => default is False , apply fire module with complex bypass method
 
+### tensorTools.residualBlock ( x , blockType = 'type2' , filters = None , filKerSelection = 'auto' , kernels = None , useStrideFirst = False , strides = (2,2))
 
+x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+
+blockType ( Arbitary ) => Options: type1/type2/custom, 'type1' is residual block with 2 convolutional layer , 'type2' is residual block with 3 convolutional layer , if blockType is 'custom' , both kernels and filters must be given (length of kernels and length of filters must be equal)
+
+filters ( Arbitary ) => Must be a list/tuple/array, if blockType is 'type1' , length of filters must be 2 , if blockType is 'type2' , length of filters must be 3. 
+
+NOTE: If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
+
+kernels ( Arbitary ) => Must be a list/tuple/array, if blockType is 'type1' , length of kernels must be 2 , if blockType is 'type2' , length of kernels must be 3. 
+
+NOTE: If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual'
+
+filKerSelection ( Arbitary ) => default is 'auto' , options: auto/manual
+
+useStrideFirst ( Arbitary ) => default is False , if True , strides will apply to first convolutional layer
+
+strides ( Arbitary ) => default is (2,2) , if useStrideFirst is False , it's unnecessary 
