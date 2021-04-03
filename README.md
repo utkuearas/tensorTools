@@ -51,3 +51,25 @@ t ( Arbitary ) => t used for calculate first expand convolution layer (expand = 
 useStride ( Arbitary ) => If True , stride will apply to Depthwise Convolution layer
 
 strides ( Arbitary ) => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
+
+### tensorTools.ReluN ( n , name = None )
+
+n ( Mandatory ) => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
+
+name ( Arbitary ) => You can specify layer name
+
+### tensorTools.fireModule ( x , squeeze = 16 , expand = 64 , kernels = ( (1,1) , (3,3) ) , bypass = False , complexBypass = False )
+
+x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+
+squeeze ( Arbitary ) => Must be an integer , specify the filter amount of squeeze layer
+
+expand ( Arbitary ) => Must be an integer , specify the filter amount of expand layer
+
+kernels ( Arbitary ) => Must be an list/tuple/array with 2 length , specify the kernels of squeeze and expand layer, default value is same with the article
+
+bypass ( Arbitary ) => default is False , apply fire module with bypass method
+
+complexBypass ( Arbitary ) => default is False , apply fire module with complex bypass method
+
+
