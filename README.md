@@ -8,16 +8,16 @@ Tensor Tools is a library which contain many ready popular methods that used in 
 
 Tensor Tools contain:
 
-l. MobileNets Bottleneck Blocks
-  l. MobileNetV1 Block
-  l. MobileNetv2 Block
-l. SqueezeNet Blocks
-  l. Fire Module
-l. ResNet Blocks
-  l. Residual Block
+1. MobileNets Bottleneck Blocks
+  1. MobileNetV1 Block
+  2. MobileNetv2 Block
+2. SqueezeNet Blocks
+  1. Fire Module
+3. ResNet Blocks
+  1. Residual Block
   
 ## What is advantage of using tensorTools library ?
 
-l. Building models quickly
-l. Easy To Use
-l. Flexibility ( You can change some parameters in ready methods such as kernel size )
+1. Building models quickly
+2. Easy To Use
+3. Flexibility ( You can change some parameters in ready methods such as kernel size )
