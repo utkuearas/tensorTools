@@ -26,7 +26,7 @@ Tensor Tools contain:
 
 ### tensorTools.mobileNetv1Block(x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
-x ( Mandatory ) => Must be a tensor with at least 4d dimension (None , 32 , 32 , 3)
+x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
 depthWiseKernel ( Arbitary ) => Default value is same with original article 
 
@@ -38,7 +38,7 @@ strides ( Arbitary ) => If useStride is False , this is unnecessary. If useStrid
 
 ### tensorTools.mobileNetv2Block(x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
 
-x ( Mandatory ) => Must be a tensor with at least 4d dimension (None , 32 , 32 , 3)
+x ( Mandatory ) => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
 outputChannel ( Mandatory ) => Must be an integer , specify the output channel size
 
