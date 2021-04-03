@@ -24,7 +24,7 @@ Tensor Tools contain:
 
 # Documentation
 
-## tensorTools.mobileNetv1Block(x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
+### tensorTools.mobileNetv1Block(x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
 x ( Mandatory ) => Must be a tensor with at least 4d dimension (None , 32 , 32 , 3)
 
@@ -36,7 +36,7 @@ useStride ( Arbitary ) => If True , stride will apply to Depthwise Convolution l
 
 strides ( Arbitary ) => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
 
-## tensorTools.mobileNetv2Block(x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
+### tensorTools.mobileNetv2Block(x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
 
 x ( Mandatory ) => Must be a tensor with at least 4d dimension (None , 32 , 32 , 3)
 
