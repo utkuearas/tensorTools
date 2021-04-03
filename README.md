@@ -30,6 +30,7 @@ Tensor Tools contain:
 
 **Customizable MobileNet V1 Block**
  
+<br>
  
 **x( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
@@ -41,10 +42,15 @@ Tensor Tools contain:
 
 **strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
 
+<br>
 
 ### tensorTools.mobileNetV2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2))
 
+<br>
+
 **Customizable MobileNet V2 Bottleneck Block**
+
+<br>
 
 **x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
@@ -60,23 +66,29 @@ Tensor Tools contain:
 
 **strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable
 
+<br>
 
 ### tensorTools.ReluN ( n , name = None )
 
+<br>
 
 **ReluN is made for mobileNet Relu6 Activation Layer , but you can change the number with this method**
 
+<br>
 
 **n ( Mandatory )** => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
 
 **name ( Arbitary )** => You can specify layer name
 
+<br>
 
 ### tensorTools.fireModule ( x , squeeze = 16 , expand = 64 , kernels = ( (1,1) , (3,3) ) , bypass = False , complexBypass = False )
 
+<br>
 
 **Customizable SqueezeNet Fire Module**
 
+<br>
 
 **x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
@@ -90,12 +102,15 @@ Tensor Tools contain:
 
 **complexBypass ( Arbitary )** => default is False , apply fire module with complex bypass method
 
+<br>
 
 ### tensorTools.residualBlock ( x , blockType = 'type2' , filters = None , filKerSelection = 'auto' , kernels = None , useStrideFirst = False , strides = (2,2))
 
+<br>
 
 **Customizable ResNet Residual Block**
 
+<br>
 
 **x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
 
