@@ -10,6 +10,7 @@ Tensor Tools contain:
 * MobileNets Bottleneck Blocks
   * MobileNetV1 Block
   * MobileNetv2 Block
+  * Relu 6 ( Number can be changed )
 * SqueezeNet Blocks
   * Fire Module
 * ResNet Blocks
