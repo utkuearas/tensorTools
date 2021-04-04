@@ -2,7 +2,7 @@
 
 ## What is Tensor Tools ?
 
-Tensor Tools is a library which contain many ready popular methods that used in machine learning and computer vision.
+Tensor Tools is a library which contain ready tensorflow layers. In Tensor Tools you can find many methods to build popular models such as ResNet. Tensor Tools is developped for speed up the coding process and provide flexibility when implement popular models.
 
 ## Which methods that include ?
 
