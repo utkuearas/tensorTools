@@ -100,7 +100,7 @@ Tensor Tools contain:
 
 ---
 
-### tensorTools.ReluN ( n , name = None )
+### tensorTools.ReluN ( n )
 
 <br> 
 
@@ -113,10 +113,6 @@ Tensor Tools contain:
 <br>
 
 **n ( Mandatory )** => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
-
-<br>
-
-**name ( Arbitary )** => You can specify layer name 
 
 <br>
 
