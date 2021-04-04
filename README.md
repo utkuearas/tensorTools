@@ -4,9 +4,9 @@
 
 Tensor Tools is a library which contain ready tensorflow layers. In Tensor Tools you can find many methods to build popular models such as ResNet. Tensor Tools is developped for speed up the coding process and provide flexibility when implement popular models.
 
-## Depencies
+# Depencies
 
-* Tensorflow
+* **Tensorflow**
 
 ## Which methods that include ?
 
