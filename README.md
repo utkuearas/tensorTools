@@ -15,6 +15,9 @@ Tensor Tools contain:
   * Fire Module
 * ResNet Blocks
   * Residual Block
+* Math
+  * Trainable Math Multiplication Layer
+  * Element Wise Multiplication Layer
   
 ## What is advantage of using tensorTools library ?
 
