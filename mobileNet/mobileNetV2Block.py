@@ -2,7 +2,7 @@ from tensorflow.keras.layers import DepthwiseConv2D , Conv2D , BatchNormalizatio
 import tensorTools.__callCounter as callCounter
 from reluN import ReluN
 
-def mobileNetV2Block(x , outputChannel , depthWiseKernel = (3,3) , filters = None , t = 6 , useStride = True , strides = (2,2)):
+def mobileNetV2Block(x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2)):
 
     expand = x.shape[-1] * t
 
