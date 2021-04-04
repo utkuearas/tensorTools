@@ -24,7 +24,7 @@ Tensor Tools contain:
 
 # Documentation
 
-## tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
+### tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
 <br><br>
 
@@ -53,6 +53,7 @@ Tensor Tools contain:
 <br>
 
 <br>
+---
 
 ### tensorTools.mobileNetV2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2)) 
 
@@ -96,6 +97,8 @@ Tensor Tools contain:
 
 <br>
 
+---
+
 ### tensorTools.ReluN ( n , name = None )
 
 <br> 
@@ -117,6 +120,8 @@ Tensor Tools contain:
 <br>
 
 <br>
+
+---
 
 ### tensorTools.fireModule ( x , squeeze = 16 , expand = 64 , kernels = ( (1,1) , (3,3) ) , bypass = False , complexBypass = False )
 
@@ -155,6 +160,8 @@ Tensor Tools contain:
 <br>
 
 <br>
+
+---
 
 ### tensorTools.residualBlock ( x , blockType = 'type2' , filters = None , filKerSelection = 'auto' , kernels = None , useStrideFirst = False , strides = (2,2))
 
