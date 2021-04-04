@@ -32,7 +32,7 @@ Tensor Tools contain:
  
 <br>
  
-**x( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3)
+**x( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) <br>
 
 **depthWiseKernel ( Arbitary )** => Default value is same with original article 
 
