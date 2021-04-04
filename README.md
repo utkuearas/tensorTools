@@ -24,7 +24,7 @@ Tensor Tools contain:
 
 # Documentation
 
-### tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
+## tensorTools.mobileNetV1Block (x , depthWiseKernel = (3,3) , filters = None , useStride = False , strides = (2,2))
 
 <br><br>
 
