@@ -53,6 +53,7 @@ Tensor Tools contain:
 <br>
 
 <br>
+
 ---
 
 ### tensorTools.mobileNetV2Block (x , outputChannel , depthWiseKernel = (3,3) , t = 6 , useStride = True , strides = (2,2)) 
