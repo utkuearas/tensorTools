@@ -39,23 +39,33 @@ Tensor Tools contain:
  
 <br><br>
  
-**x( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
+**x( Mandatory )**  
+
+* Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
 
 <br>
 
-**depthWiseKernel ( Arbitary )** => Default value is same with original article  
+**depthWiseKernel ( Arbitary )**   
+
+* Default value is same with original article  
 
 <br>
 
-**filters ( Arbitary )** => Must be an integer , default value equal to double of x's channel 
+**filters ( Arbitary )**   
+
+* Must be an integer , default value equal to double of x's channel 
 
 <br>
 
-**useStride ( Arbitary )** => If True , stride will apply to Depthwise Convolution layer
+**useStride ( Arbitary )**   
+
+* If True , stride will apply to Depthwise Convolution layer
 
 <br>
 
-**strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable 
+**strides ( Arbitary )**   
+
+* If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable 
 
 <br>
 
@@ -75,31 +85,45 @@ Tensor Tools contain:
 
 <br>
 
-**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
+**x ( Mandatory )**   
+
+* Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
 
 <br>
 
-**outputChannel ( Mandatory )** => Must be an integer , specify the output channel size
+**outputChannel ( Mandatory )**   
+
+*  Must be an integer , specify the output channel size
 
 <br>
 
-**depthWiseKernel ( Arbitary )** => Default value is same with original article 
+**depthWiseKernel ( Arbitary )**   
+
+* Default value is same with original article 
 
 <br>
 
-**filters ( Arbitary )** => Must be an integer , default value equal to double of x's channel 
+**filters ( Arbitary )**   
+
+* Must be an integer , default value equal to double of x's channel 
 
 <br>
 
-**t ( Arbitary )** => t used for calculate first expand convolution layer (expand = x's channel * t) , default value equal to 6 
+**t ( Arbitary )**   
+
+* T is used for calculate first expand convolution layer (expand = x's channel * t) , default value equal to 6 
 
 <br>
 
-**useStride ( Arbitary )** => If True , stride will apply to Depthwise Convolution layer 
+**useStride ( Arbitary )**   
+
+* If True , stride will apply to Depthwise Convolution layer 
 
 <br>
 
-**strides ( Arbitary )** => If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable 
+**strides ( Arbitary )**   
+
+* If useStride is False , this is unnecessary. If useStride is True, stride value can be changeable 
 
 <br>
 
@@ -119,7 +143,9 @@ Tensor Tools contain:
 
 <br>
 
-**n ( Mandatory )** => If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
+**n ( Mandatory )**   
+
+* If you want to use default Relu6 Activation, send 6 to parameter n , else you can specify n value
 
 <br>
 
@@ -139,27 +165,39 @@ Tensor Tools contain:
 
 <br>
 
-**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
+**x ( Mandatory )**   
+
+* Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
 
 <br>
 
-**squeeze ( Arbitary )** => Must be an integer , specify the filter amount of squeeze layer 
+**squeeze ( Arbitary )**   
+
+* Must be an integer , specify the filter amount of squeeze layer 
 
 <br>
 
-**expand ( Arbitary )** => Must be an integer , specify the filter amount of expand layer
+**expand ( Arbitary )**   
+
+* Must be an integer , specify the filter amount of expand layer
 
 <br>
 
-**kernels ( Arbitary )** => Must be an list/tuple/array with 2 length , specify the kernels of squeeze and expand layer, default value is same with the article 
+**kernels ( Arbitary )**   
+
+* Must be an list/tuple/array with 2 length , specify the kernels of squeeze and expand layer, default value is same with the article 
 
 <br>
 
-**bypass ( Arbitary )** => default is False , apply fire module with bypass method 
+**bypass ( Arbitary )**   
+
+* Default is False , apply fire module with bypass method 
 
 <br>
 
-**complexBypass ( Arbitary )** => default is False , apply fire module with complex bypass method 
+**complexBypass ( Arbitary )**   
+
+* Default is False , apply fire module with complex bypass method 
 
 <br>
 
@@ -179,23 +217,21 @@ Tensor Tools contain:
 
 <br>
 
-**x ( Mandatory )** => Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
+**x ( Mandatory )**   
+
+* Must be a tensor with at least 4 dimension Example: (None , 32 , 32 , 3) 
 
 <br> 
 
-**blockType ( Arbitary )** => Options: type1/type2/custom, 'type1' is residual block with 2 convolutional layer , 'type2' is residual block with 3 convolutional layer , if blockType is 'custom' , both kernels and filters must be given (length of kernels and length of filters must be equal) 
+**blockType ( Arbitary )**   
+
+* Options: type1/type2/custom, 'type1' is residual block with 2 convolutional layer , 'type2' is residual block with 3 convolutional layer , if blockType is 'custom' , both kernels and filters must be given (length of kernels and length of filters must be equal) 
 
 <br>
 
-**filters ( Arbitary )** => Must be a list/tuple/array, if blockType is 'type1' , length of filters must be 2 , if blockType is 'type2' , length of filters must be 3. 
+**filters ( Arbitary )**   
 
-<br>
-
-**NOTE:** If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual' 
-
-<br>
-
-**kernels ( Arbitary )** => Must be a list/tuple/array, if blockType is 'type1' , length of kernels must be 2 , if blockType is 'type2' , length of kernels must be 3.  
+* Must be a list/tuple/array, if blockType is 'type1' , length of filters must be 2 , if blockType is 'type2' , length of filters must be 3. 
 
 <br>
 
@@ -203,14 +239,30 @@ Tensor Tools contain:
 
 <br>
 
-**filKerSelection ( Arbitary )** => default is 'auto' , options: auto/manual 
+**kernels ( Arbitary )**   
+
+* Must be a list/tuple/array, if blockType is 'type1' , length of kernels must be 2 , if blockType is 'type2' , length of kernels must be 3.  
 
 <br>
 
-**useStrideFirst ( Arbitary )** => default is False , if True , strides will apply to first convolutional layer 
+**NOTE:** If filKerSelection is 'auto' you can't change the filters you must change filKerSelection to 'manual' 
 
 <br>
 
-**strides ( Arbitary )** => default is (2,2) , if useStrideFirst is False , it's unnecessary  
+**filKerSelection ( Arbitary )**   
+
+* Default is 'auto' , options: auto/manual 
+
+<br>
+
+**useStrideFirst ( Arbitary )**   
+
+* Default is False , if True , strides will apply to first convolutional layer 
+
+<br>
+
+**strides ( Arbitary )**   
+
+* Default is (2,2) , if useStrideFirst is False , it's unnecessary  
 
 <br>
