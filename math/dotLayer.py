@@ -5,7 +5,7 @@ class trainableDot(Layer):
 
     def __init__(self, filters , **kwargs):
 
-        super(trainableDot , self).__init__(kwargs)
+        super(trainableDot , self).__init__(**kwargs)
         self.filters = filters
 
     def build(self , shape):
